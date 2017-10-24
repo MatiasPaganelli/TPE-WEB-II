@@ -6,12 +6,12 @@ class ConfigApp
   public static $PARAMS = 'params';
   public static $ACTIONS = [
     'index'=> 'ProductosController#productos',
-    'indexAdmin'=> 'ProductosController#productosAdmin',
-    'proteinasAdmin'=> 'ProductosController#proteinasAdmin',
-    'creatinasAdmin'=> 'ProductosController#creatinasAdmin',
-    'preentrenosAdmin'=> 'ProductosController#preentrenosAdmin',
-    'ganadoresAdmin'=> 'ProductosController#ganadoresAdmin',
-    'categoriasAdmin'=> 'CategoriasController#categoriasAdmin',
+    'indexAdmin'=> 'AdminController#productosAdmin',
+    'proteinasAdmin'=> 'AdminController#proteinasAdmin',
+    'creatinasAdmin'=> 'AdminController#creatinasAdmin',
+    'preentrenosAdmin'=> 'AdminController#preentrenosAdmin',
+    'ganadoresAdmin'=> 'AdminController#ganadoresAdmin',
+    'categoriasAdmin'=> 'AdminController#categoriasAdmin',
     'proteinas'=> 'ProductosController#proteinas',
     'creatinas'=> 'ProductosController#creatinas',
     'preentrenos'=> 'ProductosController#preentrenos',
@@ -20,12 +20,13 @@ class ConfigApp
     'login'=>'LoginController#login',
     'logout' => 'LoginController#destroy',
     'verificarUsuario'=>'LoginController#verify',
-    'agregarProducto'=>'ProductosController#createProducto',
-    'guardarProducto'=>'ProductosController#storeProducto',
-    'borrarProducto'=>'ProductosController#deleteProducto',
-    'borrarCategoria'=>'CategoriasController#deleteCategoria',
-    'agregarCategoria'=>'CategoriasController#createCategoria',
-    'guardarCategoria'=>'CategoriasController#storeCategoria',
+    'agregarProducto'=>'AdminController#createProducto',
+    'guardarProducto'=>'AdminController#storeProducto',
+    'borrarProducto'=>'AdminController#deleteProducto',
+    'borrarCategoria'=>'AdminController#deleteCategoria',
+    'agregarCategoria'=>'AdminController#createCategoria',
+    'guardarCategoria'=>'AdminController#storeCategoria',
+    'filtrar'=>'AdminController#filtrarCategoria'
   ];
 }
 ?>
