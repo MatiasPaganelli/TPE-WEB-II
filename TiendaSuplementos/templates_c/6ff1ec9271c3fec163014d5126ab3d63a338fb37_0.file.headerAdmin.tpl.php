@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-24 18:17:57
+/* Smarty version 3.1.30, created on 2017-10-26 17:07:36
   from "C:\xampp\htdocs\AdminController\TiendaSuplementos\templates\headerAdmin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ef67b5de33f6_94952442',
+  'unifunc' => 'content_59f1fa382f08a2_55707445',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6ff1ec9271c3fec163014d5126ab3d63a338fb37' => 
     array (
       0 => 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\templates\\headerAdmin.tpl',
-      1 => 1508861759,
+      1 => 1509030419,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59ef67b5de33f6_94952442 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59f1fa382f08a2_55707445 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <meta charset="utf-8">
@@ -34,7 +34,7 @@ echo $_prefixVariable1;?>
 <body>
   <div class="container col-md-4 col-sm-6 col-lg-4">
   <form action="filtrar" method="POST">
-    <select name="filtrarCategoria" class="form-control filter">
+    <select name="filtrar" class="form-control filter">
       <option value="" selected disabled hidden>Categorias</option>
       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categorias']->value, 'categoria');

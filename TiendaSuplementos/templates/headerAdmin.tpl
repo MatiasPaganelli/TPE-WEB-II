@@ -6,7 +6,7 @@
 <body>
   <div class="container col-md-4 col-sm-6 col-lg-4">
   <form action="filtrar" method="POST">
-    <select name="filtrarCategoria" class="form-control filter">
+    <select name="filtrar" class="form-control filter">
       <option value="" selected disabled hidden>Categorias</option>
       {foreach from=$categorias item=categoria}
       <option value="{$categoria['id']}">{$categoria['nombre']}</option>

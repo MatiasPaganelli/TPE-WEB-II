@@ -28,10 +28,10 @@ class AdminController extends Controller
     }
   }
   function filtrarCategoria() {
-    if (isset($_POST['filtrarCategoria|'])) {
+    if (isset($_POST['filtrar'])) {
       $categorias=$this->model->getCategorias();
       $productos=$this->model->getProductos();
-      $categoriaFiltrada =  $_POST['filtrarCategoria'];
+      $categoriaFiltrada =  $_POST['filtrar'];
       $this->view->productosFiltradosAdmin($categorias,$productos,$categoriaFiltrada);
     }
   }

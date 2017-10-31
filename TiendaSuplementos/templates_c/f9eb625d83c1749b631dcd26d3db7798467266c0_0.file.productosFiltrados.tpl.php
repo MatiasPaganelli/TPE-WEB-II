@@ -1,41 +1,70 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-24 14:44:48
+/* Smarty version 3.1.30, created on 2017-10-26 18:02:07
   from "C:\xampp\htdocs\AdminController\TiendaSuplementos\templates\Admin\productosFiltrados.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ef35c0350ea3_08776386',
+  'unifunc' => 'content_59f206ff70b9f3_47020207',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f9eb625d83c1749b631dcd26d3db7798467266c0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\templates\\Admin\\productosFiltrados.tpl',
-      1 => 1508849085,
+      1 => 1509033724,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:headerAdmin.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_59ef35c0350ea3_08776386 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59f206ff70b9f3_47020207 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_image')) require_once 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\libs\\plugins\\function.html_image.php';
-$_smarty_tpl->_subTemplateRender("file:headerAdmin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
-<h1>Ganadores:</h1>
-<?php
+<head>
+  <meta charset="utf-8">
+  <title><?php ob_start();
+echo $_smarty_tpl->tpl_vars['titulo']->value;
+$_prefixVariable1=ob_get_clean();
+echo $_prefixVariable1;?>
+</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container col-md-4 col-sm-6 col-lg-4">
+  <form action="filtrar" method="POST">
+    <select name="filtrar" class="form-control filter">
+      <option value="" selected disabled hidden>Categorias</option>
+      <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categorias']->value, 'categoria');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
+?>
+      <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
+</option>
+      <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+    </select>
+   <button class="btn btn-lg btn-primary btn-block dofilter" type="submit">Filtrar</button>
+  </form>
+</div>
+  <div class="container">
+<h1><?php echo $_smarty_tpl->tpl_vars['categoriaFiltrada']->value;?>
+:<?php echo $_smarty_tpl->tpl_vars['productos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_id_categoria']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_id_categoria']->value['index'] : null)];?>
+</h1>
+<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'producto');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
-if ($_smarty_tpl->tpl_vars['producto']->value['id_categoria'] == $_smarty_tpl->tpl_vars['categoria']->value['id']) {?>
+if ($_smarty_tpl->tpl_vars['producto']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_id_categoria']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_id_categoria']->value['index'] : null)] == $_smarty_tpl->tpl_vars['categoriaFiltrada']->value) {?>
 <div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6">
     <div class="thumbnail">
@@ -46,7 +75,7 @@ if ($_smarty_tpl->tpl_vars['producto']->value['id_categoria'] == $_smarty_tpl->t
  </h3>
         <p><?php echo $_smarty_tpl->tpl_vars['producto']->value['descripcion'];?>
 </p>
-        <p>Categoria: <?php echo $_smarty_tpl->tpl_vars['producto']->value['id_categoria'];?>
+        <p>Categoria: <?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
 </p>
         <p><?php echo $_smarty_tpl->tpl_vars['producto']->value['nombre'];?>
 </p>
@@ -60,12 +89,6 @@ if ($_smarty_tpl->tpl_vars['producto']->value['id_categoria'] == $_smarty_tpl->t
     </div>
   </div>
   <?php }?>
-  <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
-?>
-
   <?php
 }
 }

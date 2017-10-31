@@ -5,6 +5,7 @@
 class AdminView extends View
 {
   function productosFiltradosAdmin($categorias,$productos,$categoriaFiltrada) {
+    $this->smarty->assign('titulo','Index');
     $this->smarty->assign('categorias',$categorias);
     $this->smarty->assign('productos',$productos);
     $this->smarty->assign('categoriaFiltrada',$categoriaFiltrada);
@@ -19,7 +20,7 @@ class AdminView extends View
   function mostrarProductosAdmin($productos,$categorias)
   {
     $this->smarty->assign('categorias',$categorias);
-    $this->smarty->assign('titulo','Productos');
+    $this->smarty->assign('titulo','Index');
     $this->smarty->assign('productos',$productos);
     $this->smarty->display('templates/Admin/indexAdmin.tpl');
   }
