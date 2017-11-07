@@ -16,7 +16,7 @@ class AdminController extends Controller
 
     session_start();
     if (isset($_SESSION['email'])) {
-      if (time() - $_SESSION['LAST_ACTIVITY'] > 1000) {
+      if (time() - $_SESSION['LAST_ACTIVITY'] > 9999) {
         header('Location: '.LOGOUT);
         die();
       }
@@ -29,9 +29,9 @@ class AdminController extends Controller
   }
   function filtrarCategoria() {
     if (isset($_POST['filtrar'])) {
+      $categoriaFiltrada = $_POST['filtrar'];
       $categorias=$this->model->getCategorias();
       $productos=$this->model->getProductos();
-      $categoriaFiltrada =  $_POST['filtrar'];
       $this->view->productosFiltradosAdmin($categorias,$productos,$categoriaFiltrada);
     }
   }

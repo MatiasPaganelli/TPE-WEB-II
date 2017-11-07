@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-26 17:07:36
+/* Smarty version 3.1.30, created on 2017-11-07 00:35:53
   from "C:\xampp\htdocs\AdminController\TiendaSuplementos\templates\headerAdmin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59f1fa382f08a2_55707445',
+  'unifunc' => 'content_5a00f1d95f4db0_03092182',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6ff1ec9271c3fec163014d5126ab3d63a338fb37' => 
     array (
       0 => 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\templates\\headerAdmin.tpl',
-      1 => 1509030419,
+      1 => 1510011346,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59f1fa382f08a2_55707445 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a00f1d95f4db0_03092182 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <meta charset="utf-8">
@@ -41,7 +41,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
 ?>
-      <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id'];?>
+      <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
 "><?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
 </option>
       <?php

@@ -9,31 +9,31 @@
     <select name="filtrar" class="form-control filter">
       <option value="" selected disabled hidden>Categorias</option>
       {foreach from=$categorias item=categoria}
-      <option value="{$categoria['id']}">{$categoria['nombre']}</option>
+      <option value="{$categoria['nombre']}">{$categoria['nombre']}</option>
       {/foreach}
     </select>
    <button class="btn btn-lg btn-primary btn-block dofilter" type="submit">Filtrar</button>
   </form>
 </div>
   <div class="container">
-<h1>{$categoriaFiltrada}:{$productos[id_categoria]}</h1>
 {foreach from=$productos item=producto}
-{if $producto[id_categoria] == $categoriaFiltrada}
-<div class="row">
+{if $producto['nombre_categoria'] == $categoriaFiltrada}
+<h1>{$categoriaFiltrada}:{$producto['nombre_categoria']}</h1>
+<!-- <div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6">
     <div class="thumbnail">
       {html_image file = "{$producto['images']}"}
       <div class="caption">
         <h3>{$producto['nombre']} </h3>
         <p>{$producto['descripcion']}</p>
-        <p>Categoria: {$categoria['nombre']}</p>
-        <p>{$producto['nombre']}</p>
         <p>Precio:{$producto['precio']}</p>
         <p>Peso: {$producto['peso']}</p>
         <a href="borrarProducto/{$producto['id']}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
       </div>
     </div>
-  </div>
+  </div> -->
+  {else}
+  <p>Condicion failed</p>
   {/if}
   {/foreach}
   {include file="footer.tpl"}
