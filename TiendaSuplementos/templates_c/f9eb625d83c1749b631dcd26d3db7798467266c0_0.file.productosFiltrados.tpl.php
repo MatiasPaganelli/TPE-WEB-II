@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-07 12:48:12
+/* Smarty version 3.1.30, created on 2017-11-07 14:40:42
   from "C:\xampp\htdocs\AdminController\TiendaSuplementos\templates\Admin\productosFiltrados.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a019d7c6c5668_54070353',
+  'unifunc' => 'content_5a01b7dade1933_90934504',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f9eb625d83c1749b631dcd26d3db7798467266c0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\templates\\Admin\\productosFiltrados.tpl',
-      1 => 1510055291,
+      1 => 1510062040,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a019d7c6c5668_54070353 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a01b7dade1933_90934504 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_image')) require_once 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\libs\\plugins\\function.html_image.php';
 ?>
 <head>
@@ -62,10 +62,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
 if ($_smarty_tpl->tpl_vars['producto']->value['nombre_categoria'] == $_smarty_tpl->tpl_vars['categoriaFiltrada']->value) {?>
-<h1><?php echo $_smarty_tpl->tpl_vars['categoriaFiltrada']->value;?>
-:<?php echo $_smarty_tpl->tpl_vars['producto']->value['nombre_categoria'];?>
-</h1>
-<!-- <div class="row">
+ <div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6">
     <div class="thumbnail">
       <?php echo smarty_function_html_image(array('file'=>((string)$_smarty_tpl->tpl_vars['producto']->value['images'])),$_smarty_tpl);?>
@@ -83,9 +80,7 @@ if ($_smarty_tpl->tpl_vars['producto']->value['nombre_categoria'] == $_smarty_tp
 "><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
       </div>
     </div>
-  </div> -->
-  <?php } else { ?>
-  <p>Condicion failed</p>
+  </div>
   <?php }?>
   <?php
 }

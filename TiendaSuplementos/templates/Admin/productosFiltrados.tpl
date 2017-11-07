@@ -18,8 +18,7 @@
   <div class="container">
 {foreach from=$productos item=producto}
 {if $producto['nombre_categoria'] == $categoriaFiltrada}
-<h1>{$categoriaFiltrada}:{$producto['nombre_categoria']}</h1>
-<!-- <div class="row">
+ <div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6">
     <div class="thumbnail">
       {html_image file = "{$producto['images']}"}
@@ -31,9 +30,7 @@
         <a href="borrarProducto/{$producto['id']}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
       </div>
     </div>
-  </div> -->
-  {else}
-  <p>Condicion failed</p>
+  </div>
   {/if}
   {/foreach}
   {include file="footer.tpl"}
