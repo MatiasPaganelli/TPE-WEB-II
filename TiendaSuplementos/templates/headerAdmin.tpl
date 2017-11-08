@@ -5,14 +5,14 @@
 </head>
 <body>
   <div class="container col-md-4 col-sm-6 col-lg-4">
-  <form action="filtrar" method="POST">
-    <select name="filtrar" class="form-control filter">
-      <option value="" selected disabled hidden>Categorias</option>
-      {foreach from=$categorias item=categoria}
-      <option value="{$categoria['nombre']}">{$categoria['nombre']}</option>
-      {/foreach}
-    </select>
-   <button class="btn btn-lg btn-primary btn-block dofilter" type="submit">Filtrar</button>
-  </form>
-</div>
+    <form action="filtrarAdmin" method="POST">
+      <select name="filtrarAdmin" class="form-control filter">
+        <option value="" selected disabled hidden>Categorias</option>
+        {foreach from=$categorias item=categoria}
+        <option value="{$categoria['nombre']}">{$categoria['nombre']}</option>
+        {/foreach}
+      </select>
+      <button class="btn btn-lg btn-primary btn-block dofilter" type="submit">Filtrar</button>
+    </form>
+  </div>
   <div class="container">

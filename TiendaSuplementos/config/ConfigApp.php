@@ -6,6 +6,7 @@ class ConfigApp
   public static $PARAMS = 'params';
   public static $ACTIONS = [
     'index'=> 'ProductosController#productos',
+    'filtrar'=>'ProductosController#filtrarCategoria',
     'indexAdmin'=> 'AdminController#productosAdmin',
     'proteinasAdmin'=> 'AdminController#proteinasAdmin',
     'creatinasAdmin'=> 'AdminController#creatinasAdmin',
@@ -26,7 +27,7 @@ class ConfigApp
     'borrarCategoria'=>'AdminController#deleteCategoria',
     'agregarCategoria'=>'AdminController#createCategoria',
     'guardarCategoria'=>'AdminController#storeCategoria',
-    'filtrar'=>'AdminController#filtrarCategoria'
+    'filtrarAdmin'=>'AdminController#filtrarCategoria'
   ];
 }
 ?>

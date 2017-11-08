@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-08 15:34:36
-  from "C:\xampp\htdocs\AdminController\TiendaSuplementos\templates\headerAdmin.tpl" */
+/* Smarty version 3.1.30, created on 2017-11-08 15:34:48
+  from "C:\xampp\htdocs\AdminController\TiendaSuplementos\templates\headerVisit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a0315fc2678b7_64087477',
+  'unifunc' => 'content_5a0316083ef707_61082532',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '6ff1ec9271c3fec163014d5126ab3d63a338fb37' => 
+    '661e39334ee20352e605a35ebe83d3495af400c0' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\templates\\headerAdmin.tpl',
-      1 => 1510151611,
+      0 => 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\templates\\headerVisit.tpl',
+      1 => 1510151574,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a0315fc2678b7_64087477 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0316083ef707_61082532 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
   <meta charset="utf-8">
@@ -33,8 +33,8 @@ echo $_prefixVariable1;?>
 </head>
 <body>
   <div class="container col-md-4 col-sm-6 col-lg-4">
-    <form action="filtrarAdmin" method="POST">
-      <select name="filtrarAdmin" class="form-control filter">
+    <form action="filtrar" method="POST">
+      <select name="filtrar" class="form-control filter">
         <option value="" selected disabled hidden>Categorias</option>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categorias']->value, 'categoria');

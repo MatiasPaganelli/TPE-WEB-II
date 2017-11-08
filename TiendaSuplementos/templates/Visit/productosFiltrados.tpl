@@ -5,20 +5,21 @@
 </head>
 <body>
   <div class="container col-md-4 col-sm-6 col-lg-4">
-  <form action="filtrar" method="POST">
-    <select name="filtrar" class="form-control filter">
-      <option value="" selected disabled hidden>Categorias</option>
-      {foreach from=$categorias item=categoria}
-      <option value="{$categoria['nombre']}">{$categoria['nombre']}</option>
-      {/foreach}
-    </select>
-   <button class="btn btn-lg btn-primary btn-block dofilter" type="submit">Filtrar</button>
-  </form>
-</div>
+    <form action="filtrar" method="POST">
+      <select name="filtrar" class="form-control filter">
+        <option value="" selected disabled hidden>Categorias</option>
+        {foreach from=$categorias item=categoria}
+        <option value="{$categoria['nombre']}">{$categoria['nombre']}</option>
+        {/foreach}
+      </select>
+      <button class="btn btn-lg btn-primary btn-block dofilter" type="submit">Filtrar</button>
+    </form>
+  </div>
   <div class="container">
+
 {foreach from=$productos item=producto}
 {if $producto['nombre_categoria'] == $categoriaFiltrada}
- <div class="row">
+<div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6">
     <div class="thumbnail">
       {html_image file = "{$producto['images']}"}
@@ -27,7 +28,6 @@
         <p>{$producto['descripcion']}</p>
         <p>Precio:{$producto['precio']}</p>
         <p>Peso: {$producto['peso']}</p>
-        <a href="borrarProducto/{$producto['id']}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
       </div>
     </div>
   </div>

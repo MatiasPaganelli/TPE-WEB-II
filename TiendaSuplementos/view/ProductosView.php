@@ -2,20 +2,25 @@
 
 class ProductosView extends View
 {
-  function mostrarProductos($productos,$categorias)
+  function productosFiltradosAdmin($categorias,$productos,$categoriaFiltrada)
   {
-    $this->smarty->assign('titulo','MVC Productos');
-    $this->smarty->assign('productos',$productos);
+    $this->smarty->assign('titulo','Index');
     $this->smarty->assign('categorias',$categorias);
-    $this->smarty->display('templates/Visit/index.tpl');
+    $this->smarty->assign('productos',$productos);
+    $this->smarty->assign('categoriaFiltrada',$categoriaFiltrada);
+    $this->smarty->display('templates/Visit/productosFiltrados.tpl');
   }
-
 function proteinas($productos){
   $this->smarty->assign('titulo','Proteinas');
   $this->smarty->assign('productos',$productos);
   $this->smarty->display('templates/Visit/proteinas.tpl');
 }
-
+function mostrarProductos($productos,$categorias){
+  $this->smarty->assign('titulo','Index');
+  $this->smarty->assign('productos',$productos);
+  $this->smarty->assign('categorias',$categorias);
+  $this->smarty->display('templates/Visit/index.tpl');
+}
 function creatinas($productos){
   $this->smarty->assign('titulo','Creatinas');
   $this->smarty->assign('productos',$productos);
