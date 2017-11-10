@@ -1,32 +1,28 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-24 01:19:31
+/* Smarty version 3.1.30, created on 2017-11-09 17:27:27
   from "C:\xampp\htdocs\AdminController\TiendaSuplementos\templates\Visit\proteinas.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ee79034340c7_63143627',
+  'unifunc' => 'content_5a0481efb24f60_34230556',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fbba10e8ddc41c3c9ce3e9b55fa76c2b95f0456c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\templates\\Visit\\proteinas.tpl',
-      1 => 1507937588,
+      1 => 1510184496,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:headerVisit.tpl' => 1,
-    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_59ee79034340c7_63143627 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0481efb24f60_34230556 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_image')) require_once 'C:\\xampp\\htdocs\\AdminController\\TiendaSuplementos\\libs\\plugins\\function.html_image.php';
-$_smarty_tpl->_subTemplateRender("file:headerVisit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
 <h1>Proteinas:</h1>
 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'producto');
@@ -62,8 +58,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
 </div>
-<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
 <?php }
 }

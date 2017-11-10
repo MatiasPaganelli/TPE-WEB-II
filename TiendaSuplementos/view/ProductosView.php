@@ -19,7 +19,7 @@ function mostrarProductos($productos,$categorias){
   $this->smarty->assign('titulo','Index');
   $this->smarty->assign('productos',$productos);
   $this->smarty->assign('categorias',$categorias);
-  $this->smarty->display('templates/Visit/index.tpl');
+  $this->smarty->display('templates/indexAjax.tpl');
 }
 function creatinas($productos){
   $this->smarty->assign('titulo','Creatinas');

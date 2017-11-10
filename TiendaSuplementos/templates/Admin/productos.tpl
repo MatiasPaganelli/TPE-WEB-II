@@ -1,8 +1,4 @@
-  {include file="headerAdmin.tpl"}
-
-
-  <h1>Lista de Productos:</h1>
-
+<h1>Lista de Productos:</h1>
   {foreach from=$productos item=producto}
   <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-6">
@@ -20,4 +16,3 @@
       </div>
     </div>
     {/foreach}
-    {include file="footer.tpl"}

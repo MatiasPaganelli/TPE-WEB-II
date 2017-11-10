@@ -1,4 +1,3 @@
-{include file="headerVisit.tpl"}
 <h1>Pre Entrenos:</h1>
 {foreach from=$productos item=producto}
 {if $producto['id_categoria'] == 3}
@@ -19,4 +18,3 @@
   {/if}
   {/foreach}
 </div>
-{include file="footer.tpl"}

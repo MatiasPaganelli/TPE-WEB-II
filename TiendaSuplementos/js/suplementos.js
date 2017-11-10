@@ -1,13 +1,33 @@
 $(document).ready(function(){
   "use strict";
- // event.preventDefault();
+
+  $(".index").on("click",function(){
+    $.ajax({
+      "url":"index",
+      "method":"GET",
+      "dataType":"HTML",
+      "success": function(data) {
+        $(".container").html(data);
+      }
+    });
+  });
+  $(".indexAdmin").on("click",function(){
+    $.ajax({
+      "url":"indexAdmin",
+      "method":"GET",
+      "dataType":"HTML",
+      "success": function(data) {
+        $(".container").html(data);
+      }
+    });
+  });
   $(".proteinas").on("click",function(){
     $.ajax({
       "url":"proteinas",
       "method":"GET",
       "dataType":"HTML",
       "success": function(data) {
-        $("#container").html(data);
+        $(".container").html(data);
       }
     });
   });
@@ -17,7 +37,7 @@ $(document).ready(function(){
       "method":"GET",
       "dataType":"HTML",
       "success": function(data) {
-        $("#container").html(data);
+        $(".container").html(data);
       }
     });
   });
@@ -27,7 +47,7 @@ $(document).ready(function(){
       "method":"GET",
       "dataType":"HTML",
       "success": function(data) {
-        $("#container").html(data);
+        $(".container").html(data);
       }
     });
   });
@@ -37,7 +57,7 @@ $(document).ready(function(){
       "method":"GET",
       "dataType":"HTML",
       "success": function(data) {
-        $("#container").html(data);
+        $(".container").html(data);
       }
     });
   });
@@ -47,7 +67,7 @@ $(document).ready(function(){
       "method":"GET",
       "dataType":"HTML",
       "success": function(data) {
-        $("#container").html(data);
+        $(".container").html(data);
       }
     });
   });

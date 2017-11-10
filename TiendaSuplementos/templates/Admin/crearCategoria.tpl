@@ -1,4 +1,3 @@
-{include file="headerAdmin.tpl"}
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
        {if isset($error)}
@@ -17,4 +16,3 @@
       </div>
       </form>
     </div>
-    {include file="footer.tpl"}

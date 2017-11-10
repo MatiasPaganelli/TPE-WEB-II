@@ -1,4 +1,3 @@
-{include file="headerAdmin.tpl"}
 <h1>Lista de Categorias:</h1>
 {foreach from=$categorias item=categoria}
 <div class="row">
@@ -12,4 +11,3 @@
     </div>
   </div>
   {/foreach}
-{include file="footer.tpl"}

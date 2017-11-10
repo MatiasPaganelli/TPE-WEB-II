@@ -33,4 +33,3 @@
   </div>
   {/if}
   {/foreach}
-  {include file="footer.tpl"}

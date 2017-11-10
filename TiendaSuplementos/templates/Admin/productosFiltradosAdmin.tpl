@@ -1,4 +1,3 @@
-{include file="headerAdmin.tpl"}
     {foreach from=$productos item=producto}
     {if $producto['nombre_categoria'] == $categoriaFiltrada}
     <div class="row">
@@ -16,4 +15,3 @@
       </div>
       {/if}
       {/foreach}
-      {include file="footer.tpl"}
